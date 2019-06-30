@@ -3,6 +3,7 @@ import { Dish } from '../shared/dish';
 
 import { DishService } from '../services/dish.service';
 import { Component, OnInit, Inject } from '@angular/core';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -17,7 +18,7 @@ export class MenuComponent implements OnInit {
   
 
   constructor(private dishService: DishService,
-    @Inject('baseURL') private baseURL) { }
+    @Inject('BaseURL') private BaseURL) { }
   
   ngOnInit() {
      this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);

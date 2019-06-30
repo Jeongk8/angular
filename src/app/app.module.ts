@@ -35,6 +35,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatSliderModule} from '@angular/material/slider';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { baseURL } from './shared/baseurl';
     MatListModule,
     MatGridListModule,
     MatSliderModule,
+    HttpModule,
     MatSelectModule,
     MatSlideToggleModule,
     MatFormFieldModule, 
@@ -73,8 +75,10 @@ import { baseURL } from './shared/baseurl';
   ],
   providers: [DishService,
               PromotionService,
-              {provide: 'BaseURL', useValue: baseURL},
-              LeaderService],
+              LeaderService,
+              {provide: 'BaseURL', useValue: baseURL}
+
+              ],
   bootstrap: [AppComponent],
   entryComponents: [
         LoginComponent

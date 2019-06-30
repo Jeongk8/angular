@@ -51,7 +51,7 @@ export class DishdetailComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private fb: FormBuilder,
-    @Inject('baseURL') private baseURL) { 
+    @Inject('BaseURL') private BaseURL) { 
 
     this.createForm();
   }
@@ -97,8 +97,8 @@ export class DishdetailComponent implements OnInit {
             console.log(value);
              if (DISHES[value].id == this.dish.id){
                 DISHES[value].comments.push(
-                   this.comment;
-                  )
+                   this.comment
+                  );
              }
          }
 
